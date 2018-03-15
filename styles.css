@@ -1,9 +1,15 @@
-/* Global */
+/*  GLOBAL STYLES  */
+
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     padding: 0;
     margin: 0;
     color: #2d3c49;
@@ -37,12 +43,10 @@ img {
  }
 
  section {
-    display: flex;
     padding: 10px;
-    flex-wrap: wrap;
  }
 
-/* Header Styles */
+/* HEADER STYLES */
 
 header {
     width: 100%;
@@ -82,12 +86,13 @@ div {
     color: #02b3e4;
 }
 
-/* Mid Section */
+/* MID SECTION */
 
 .section_name {
     width: 100%;
     box-sizing: border-box;
     padding: 5px;
+    margin-bottom: 15px;
     color: #7d97ad;
 }
 
@@ -115,43 +120,45 @@ div {
     box-shadow: 0 0 11px #02b3e4;
 }
 
-.portfolio {
-    justify-content: center;
-}
-
 /* OVERLAY */
 
-.krakow {
-  position: relative;
-  width: 100%;
+.over {
+    position: relative;
+    width: 100%;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #02b3e4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #02b3e4;
 }
 
-.krakow:hover .overlay {
-  opacity: 1;
+.over:hover .overlay {
+    opacity: 1;
 }
 
 .text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
 }
 
 /* FOOTER */
@@ -161,6 +168,7 @@ footer {
     border-color: #7d97ad;
     align-content: center;
     padding: 1.5rem 0;
+    width: 100%;
 }
 
 .wrap {
@@ -182,13 +190,12 @@ a:not(:last-of-type):after {
     .header {
         box-sizing: border-box;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
     }
 
     .header_text {
-      width: 65%;
-      margin: 5px;
+        width: 65%;
+        margin-right: 20px;
     }
 
     .logo {
@@ -203,7 +210,55 @@ a:not(:last-of-type):after {
     }
 
     .job_title {
-      padding: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .box {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    section {
+        padding: 0;
+        margin: 0;
+    }
+    a:not(:last-of-type):after {
+        margin: 0 0.5em;
+    }
+
+    /* OVERLAY OFF */
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #02b3e4;
+    }
+
+    .overlay {
+        opacity: 1;
+    }
+
+    .text {
+        color: white;
+        font-size: 2em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
     }
 }
 
@@ -223,7 +278,7 @@ a:not(:last-of-type):after {
         padding: 2px;
         width: 80%;
         font-size: 1.3em;
-        margin-right: 10px;
+        margin-right: 30px;
     }
 
     .box {
@@ -231,25 +286,25 @@ a:not(:last-of-type):after {
     }
 
     .text {
-      color: white;
-      font-size: 30px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      text-align: center;
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
     }
 }
 
 @media screen and (min-width: 801px) {
     .header {
-      display: flex;
+        display: flex;
     }
 
     .logo {
-      width: 100px;
-      height: 100px;
+        width: 100px;
+        height: 100px;
     }
 
     .header_text {
@@ -258,32 +313,28 @@ a:not(:last-of-type):after {
         padding: 2px;
         width: 80%;
         font-size: 1.5em;
-        margin-right: 10px;
+        margin-right: 30px;
     }
 
     .box {
         width: 30%;
     }
 
-    .center {
-        align-items: center;
-    }
-
     .text {
-      color: white;
-      font-size: 40px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      text-align: center;
+        color: white;
+        font-size: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
     }
 }
 
 @media screen and (min-width: 1000px) {
     body {
-      width: 1000px;
-      margin: 0 auto;
+        width: 1000px;
+        margin: 0 auto;
     }
 }
