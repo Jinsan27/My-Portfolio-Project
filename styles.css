@@ -52,7 +52,8 @@ header {
 
 div {
     display: inline-block;
- }
+    flex-wrap: wrap;
+}
 
  .header_text {
     text-align: right;
@@ -87,7 +88,7 @@ div {
     width: 100%;
     box-sizing: border-box;
     padding: 5px;
-    margin-bottom: 15px;
+    margin: 15px 0;
     color: #7d97ad;
 }
 
@@ -196,12 +197,6 @@ a:not(:last-of-type):after {
     .logo {
         width: 50px;
         height: 50px;
-    }
-
-    .div {
-        box-sizing: border-box;
-        display: inline-block;
-        flex-wrap: wrap;
     }
 
     .job_title {
